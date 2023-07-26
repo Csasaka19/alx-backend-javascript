@@ -11,5 +11,4 @@ export function handleProfileSignup(firstName, lastName, fileName){
             }
         }
     });
-
 }
