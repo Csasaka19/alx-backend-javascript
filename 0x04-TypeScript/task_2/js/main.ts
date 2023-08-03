@@ -53,3 +53,10 @@ export function executeWork(employee: (Director | Teacher)) {
     }
     return (employee as Teacher).workTeacherTasks();
   }
+
+type Subjects = "Math" | "History";
+
+export function teachClass(todayClass: Subjects): string{
+    if (todayClass === "Math") return "Teaching Math";
+    if (todayClass === "History") return "Teaching History";
+}
