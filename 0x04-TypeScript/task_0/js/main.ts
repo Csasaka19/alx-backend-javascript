@@ -1,4 +1,4 @@
-interface Student {
+export default interface Student {
     firstName: string;
     lastName: string;
     age: number;
