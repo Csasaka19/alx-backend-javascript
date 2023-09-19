@@ -1,4 +1,3 @@
-
 const display_message = (message) =>{
     console.log(message);
 }
