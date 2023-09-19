@@ -1,14 +1,12 @@
-const { spawn } = require('node:child_process')
-const ls = spawn('ls', ['-lh', '/usr'])
+console.log("Welcome to Holberton School, what is your name?\n");
 
-ls.stdout.on('data', (data) => {
-    console.log('stdout:', data.toString())
-})
+process.stdin.on('readable', () => {
+    const name = process.stdin.read();
+    if (name !== null) {
+        process.stdout.write(`Your name is: ${name}`);
+    }
+});
 
-ls.stderr.on('data', (data) => {
-    console.log('stderr:', data.toString())
-})
-
-ls.on('close',  (code) => {
-    
+process.stdin.on('end', () => {
+    process.stdout.write('This important software is now closing\n');
 })
